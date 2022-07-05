@@ -5,20 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar TailwindCSS : Basic Utility 1</title>
+    <title>Belajar TailwindCSS : Pseudo-class & Dark Mode</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Open+Sans:wght@300&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-3;
+            background-color: red;
+        }
+    </style>
 </head>
 
-<body>
+<body class="dark:bg-slate-800 dark:text-slate-200">
     <h1 class="text-8xl font-bold text-center my-10">Mari Belajar <span
             class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1>
 
-    <section class="mb-10 bg-gradient-to-r from-cyan-500 to-blue-500">
+    <h2 class="my-10 text-3xl">Basic Utility :</h2>
+    <section class="mb-10 bg-gradient-to-br from-red-500 via-green-500 to-blue-500">
         <h2 class="text-3xl text-center">Spacing</h2>
         <div class="m-8 bg-yellow-400">Margin</div>
         <div class="pt-8 bg-lime-500">Padding</div>
@@ -70,11 +77,59 @@
             voluptate ut, qui asperiores voluptates, praesentium voluptatem mollitia recusandae.</p>
     </div>
 
-    <div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 border-8 overflow-hidden flex" style="background-image: url(./img/1.jpg);">
+    <div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 border-8 overflow-hidden flex"
+        style="background-image: url(./img/1.jpg);">
         <div class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md rounded-full"></div>
     </div>
 
+
+    <h2 class="my-10 text-3xl">Pseudo-class & Dark Mode :</h2>
+    <hr class="my-20" />
+
+    <div class="flex justify-center">
+        <span class="text-sm text-slate-500 mr-2">Light</span>
+        <input type="checkbox" id="toggle" class="">
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+            </div>
+        </label>
+        <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <button
+        class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">Simpan</button>
+
+    <div
+        class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-serif hover:bg-sky-500 group dark:hover:bg-slate-300">
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
+        <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800">Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Sint, placeat, rerum ipsa fugit corrupti aperiam, dolores
+            perspiciatis dolore repudiandae aliquam quas dicta rem soluta veniam totam! Tenetur repellendus sed ullam.
+        </p>
+    </div>
+
+    <div class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5">
+        <form action="">
+            <label for="email">
+                <span class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-1">Email</span>
+                <input id="email" type="email" placeholder="masukkan email!" class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer" />
+                <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
+            </label>
+        </form>
+    </div>
+
+
     <div class="mb-96"></div>
+
+    <script>
+        const checkbox = document.querySelector('#toggle');
+        const html = document.querySelector('html');
+
+        checkbox.addEventListener('click', () => {
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark')
+        })
+    </script>
 </body>
 
 </html>
