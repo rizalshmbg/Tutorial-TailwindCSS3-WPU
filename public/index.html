@@ -13,7 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        #toggle:checked ~ label div.toggle-circle {
+        #toggle:checked~label div.toggle-circle {
             @apply translate-x-96;
             background-color: red;
         }
@@ -102,8 +102,11 @@
 
     <div
         class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-serif hover:bg-sky-500 group dark:hover:bg-slate-300">
-        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
-        <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800">Lorem ipsum
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card
+        </h5>
+        <p
+            class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800">
+            Lorem ipsum
             dolor sit amet consectetur adipisicing elit. Sint, placeat, rerum ipsa fugit corrupti aperiam, dolores
             perspiciatis dolore repudiandae aliquam quas dicta rem soluta veniam totam! Tenetur repellendus sed ullam.
         </p>
@@ -112,8 +115,10 @@
     <div class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5">
         <form action="">
             <label for="email">
-                <span class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-1">Email</span>
-                <input id="email" type="email" placeholder="masukkan email!" class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer" />
+                <span
+                    class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-1">Email</span>
+                <input id="email" type="email" placeholder="masukkan email!"
+                    class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer" />
                 <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
             </label>
         </form>
@@ -122,13 +127,47 @@
     <hr class="my-20" />
     <h2 class="my-10 text-3xl">Transform Transition Animation :</h2>
 
-    <div class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:rotate-180 hover:origin-top-left hover:bg-pink-500 transition"></div>
+    <div
+        class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:rotate-180 hover:origin-top-left hover:bg-pink-500 transition">
+    </div>
 
     <div class="w-40 h-40 mx-auto mt-20 group">
-        <div class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 ease-in-out delay-1000"></div>
+        <div
+            class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 ease-in-out delay-1000">
+        </div>
     </div>
 
     <div class="w-40 h-40 bg-pink-500 mx-auto rounded-lg shadow-lg mt-20 animate-wiggle"></div>
+
+    <hr class="my-20 border-t-4" />
+    <h2 class="my-10 text-3xl">Layouting :</h2>
+
+    <div class="container px-8 mx-auto">
+        <div class="border rounded-lg shadow-lg p-10 relative">
+            <div class="w-10 h-10 bg-sky-200 rounded-full flex absolute -top-5 left-1/2 -translate-x-1/2 cursor-pointer">
+                <span class="text m-auto">🔝</span>
+            </div>
+
+            <a href="#" class="w-10 h-10 bg-yellow-200 rounded-full flex fixed bottom-5 right-5 -translate-x-1/2 cursor-pointer">
+                <span class="text m-auto">🔝</span>
+            </a>
+
+            <img src="./img/1.jpg" alt="Laptop" width="150" class="float-left mr-3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iusto dignissimos illo, libero omnis sit
+                cupiditate dolorum rerum distinctio ipsum voluptate. Rem dignissimos officiis accusantium tempora neque
+                accusamus quos sint impedit natus reprehenderit, consectetur consequuntur ullam facilis quasi? Ipsa
+                minus corrupti deleniti cupiditate est voluptatum odit laborum expedita saepe provident.</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto border rounded-lg shadow-lg px-8 mt-20 columns-3">
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+        <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+    </div>
 
     <div class="mb-96"></div>
 
