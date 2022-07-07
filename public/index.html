@@ -5,19 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar TailwindCSS : Pseudo-class & Dark Mode</title>
+    <title>Belajar TailwindCSS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Open+Sans:wght@300&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-        #toggle:checked~label div.toggle-circle {
-            @apply translate-x-96;
-            background-color: red;
-        }
-    </style>
 </head>
 
 <body class="dark:bg-slate-800 dark:text-slate-200">
@@ -88,7 +82,7 @@
 
     <div class="flex justify-center">
         <span class="text-sm text-slate-500 mr-2">Light</span>
-        <input type="checkbox" id="toggle" class="">
+        <input type="checkbox" id="toggle" class="hidden">
         <label for="toggle">
             <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
                 <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
@@ -269,38 +263,42 @@
         <h2 class="h-15 font-semibold text-xl text-slate-700 md:col-start-4 md:row-start-2 md:flex"><span class="self-center">Welcome to Grid System</span></h2>
         <div class="h-15 text-lg font-bold text-slate-600 md:col-start-2 md:row-start-2 md:flex"><span class="self-end">@rizalshmbg</span></div>
 
-        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div class="w-full h-full bg-[url('../img/grid/1.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-6 transition-all duration-500"></div>
+        <div class="group grid-card">
+            <div class="grid-card-img bg-[url('../img/grid/1.jpg')]"></div>
         </div>
-        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] md:col-start-3 overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card md:col-start-3">
             <div class="w-full h-full bg-[url('../img/grid/2.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-6 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card">
             <div class="w-full h-full bg-[url('../img/grid/3.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-6 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card">
             <div class="w-full h-full bg-[url('../img/grid/4.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-6 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card">
             <div class="w-full h-full bg-[url('../img/grid/5.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-6 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] md:col-start-2 overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card md:col-start-2">
             <div class="w-full h-full bg-[url('../img/grid/6.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-6 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] md:col-start-4 overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card md:col-start-4">
             <div class="w-full h-full bg-[url('../img/grid/7.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-6 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card">
             <div class="w-full h-full bg-[url('../img/grid/8.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-6 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] md:col-start-3 overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card md:col-start-3">
             <div class="w-full h-full bg-[url('../img/grid/9.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-6 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] md:col-start-3 overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card md:col-start-3">
             <div class="w-full h-full bg-[url('../img/grid/10.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-6 transition-all duration-500"></div>
         </div>
     </div>
 
+    <hr class="my-20" />
+    <h2 class="my-10 text-3xl">Functions & Directives :</h2>
+
+    <h1>Hello Tailwind</h1>
 
     <div class="mb-96"></div>
 
